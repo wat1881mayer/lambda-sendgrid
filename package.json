@@ -1,0 +1,24 @@
+{
+  "name": "lambda-sendgrid",
+  "version": "1.0.0",
+  "description": "A Lambda function to send emails using Sendgrid triggered by SQS events.",
+  "main": "src/handler.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/handler.js",
+    "deploy": "aws lambda update-function-code --function-name your-function-name --zip-file fileb://function.zip"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.0",
+    "aws-sdk": "^2.1030.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "@types/aws-lambda": "^8.10.83",
+    "@types/node": "^16.11.7"
+  },
+  "engines": {
+    "node": ">=14.x"
+  },
+  "license": "MIT"
+}
